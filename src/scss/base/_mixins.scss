@@ -1,0 +1,60 @@
+@use 'variables' as v;
+
+@mixin heading ($color: v.$naranja){
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    color: $color;
+    letter-spacing: 1px;
+}
+
+@mixin phone {
+    @media (min-width: v.$phone) {
+    @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+    @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+    @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) {
+    @content;
+    }
+}
+
+@mixin phone-2 {
+    @media (max-width: v.$phone) {
+    @content;
+    }
+}
+@mixin tablet-2 {
+    @media (max-width: v.$tablet) {
+    @content;
+    }
+}
+@mixin desktop-2 {
+    @media (max-width: v.$desktop) {
+    @content;
+    }
+}
+@mixin desktopXL-2 {
+    @media (max-width: v.$desktopXL) {
+    @content;
+    }
+}
+
+@mixin grid ($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+

@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.sobre-nosotros {
+    background: rgb(226,53,15);
+    background: linear-gradient(341deg, rgba(226,53,15,0.4542191876750701) 0%,
+    rgba(247,88,9,0.35057773109243695) 100%);
+    padding: 3rem;
+    min-width: 100%;
+    @include m.tablet  {
+        @include m.grid(2, 3rem);
+    }
+
+}
+
+.contenido-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+        background-color: v.$naranja_oscuro;
+               padding: 1rem, 4rem;
+    }
+
+    .quienes-somos {
+        color: v.$naranja_oscuro;
+        font-size: 3rem;
+        font-weight: 900;
+    }
+}
